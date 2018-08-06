@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Axis";
+    src: url("Axis.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axis Bold";
+    src: url("Axis-Extrabold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
