@@ -45,9 +45,13 @@
 	    align-items: center; /* Centers items on the cross-axis (y by default)*/
 	}
 
-	.me {
+	#me {
 		border-radius: 50%;
 		border: 5px solid #606060;
+	}
+
+	#me:hover {
+		border: 5px solid white;
 	}
 
 	.over {

@@ -45,7 +45,7 @@
 	    align-items: center; /* Centers items on the cross-axis (y by default)*/
 	}
 
-	.me {
+	#me {
 		height: 160px;
 		width: 160px;
 		border-radius: 50%;

@@ -81,7 +81,7 @@
 	    align-items: center; /* Centers items on the cross-axis (y by default)*/
 	}
 
-	.me {
+	#me {
 		height: 80px;
 		width: 80px;
 		border-radius: 50%;
@@ -112,14 +112,16 @@
 	}
 
 	.icon {
+		height: 60px;
+		width: 60px;
 		border-radius: 50%;
-		border: 5px solid #606060;
+		border: 3px solid #606060;
 		margin-right: 20px;
 		margin-left: 20px;
 	}
 
 	.icon:hover {
-		border: 5px solid white;
+		border: 3px solid white;
 	}
 
 	.info {
@@ -142,8 +144,31 @@
 		color: #606060;
 	}
 
+	.dlink {
+		font-size: 20px;
+		color: white;
+		font-family: "Axis Bold";
+	}
+
+	.dlink:hover {
+		color: #606060;
+	}
+
 	.github {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: 44px;
 		text-align: center;
+	}
+
+	#abt {
+		color: white;
+		width: 96px;
+		text-decoration: none;
+	}
+	
+	#abt:hover {
+		color: #606060;
 	}
 }
