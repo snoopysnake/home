@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 body {
@@ -8,12 +8,13 @@ body {
 	background-repeat: no-repeat; /* Do not repeat the image */
 	display: flex;
 	background-position: center 0;
-	align-items: center;
+  	background-attachment: fixed;
+	/*align-items: center;*/
 	justify-content: center;
 	background-size: cover;
 	height: 100%;
     min-height: 100%;
-
+    margin: 0;
 }
 
 .welcome {
@@ -21,9 +22,33 @@ body {
 	font-family: "Raleway";
 	letter-spacing: 1px;
 	color: #161616;
-	position: absolute;
-	top: 5%;
+	padding-top: 8vh;
+	padding-bottom: 8vh;
 	user-select: none;
+}
+
+.about {
+	width: 56%;
+	/*top: 15%;*/
+	position: relative;
+	display: table;
+
+	background-color: rgba(205,205,205,.7);
+}
+
+.content > * {
+	margin-bottom: 30px;
+}
+
+.about > .content {
+	font-family: "Raleway";
+	padding: 0 50px 50px 50px;
+	overflow-y: auto;
+}
+
+.content > p {
+	line-height: 30px;
+	font-size: 20px;
 }
 
 .first-name {
@@ -51,7 +76,7 @@ a {
 #menuToggle
 {
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 40px;
 	left: 40px;
 
@@ -143,7 +168,8 @@ a {
 	letter-spacing: 1px;
 
 	position: fixed;
-	width: 240px;
+	width: 12%;
+	/*width: 240px;*/
 	height: 100%;
 	top: 0;
 	margin: -100px 0 0 -50px;
@@ -210,8 +236,9 @@ a {
 
 @media screen and (max-width: 475px) {
 	.welcome {
+		position: absolute;
 		padding: 0;
-		top: 17%;
+		/*top: 17%;*/
 	}
 
 	#menuToggle	{
