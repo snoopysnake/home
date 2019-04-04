@@ -1,0 +1,237 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+	background-image: url("background.png");
+	background-repeat: no-repeat; /* Do not repeat the image */
+	display: flex;
+	background-position: center 0;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	height: 100%;
+    min-height: 100%;
+
+}
+
+.welcome {
+	text-align: center;
+	font-family: "Raleway";
+	letter-spacing: 1px;
+	color: #161616;
+	position: absolute;
+	top: 5%;
+	user-select: none;
+}
+
+.first-name {
+	font-family: "Lato";
+	letter-spacing: 1px;
+	color: #f5f0ea;
+}
+
+.last-name {
+	font-family: "Lato";
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #161616;
+}
+
+.welcome:hover a {
+	/*color: #ad1814;*/
+	text-shadow: 4px 4px 4px rgba(0,0,0,.15);
+}
+
+a {
+	text-decoration: none;
+}
+
+#menuToggle
+{
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+
+	z-index: 1;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle input
+{
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+
+	cursor: pointer;
+
+	opacity: 0; /* hide this */
+	z-index: 2; /* and place it over the hamburger */
+
+	-webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+	display: block;
+	width: 40px;
+	height: 5px;
+	margin-bottom: 6px;
+	position: relative;
+
+	background: #e2dcdc;
+	border-radius: 3px;
+
+	z-index: 1;
+
+	transform-origin: 4px 0px;
+
+	transition: transform 0.25s cubic-bezier(0.77,0.2,0.05,1.0),
+	          background 0.25s cubic-bezier(0.77,0.2,0.05,1.0),
+	          opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+	transform-origin: 0% 100%;
+}
+
+/* 
+ * Hamburger animation
+ */
+#menuToggle input:checked ~ span
+{
+	opacity: 0;
+	transform: translate(0, 9px);
+	/*transform: rotate(45deg) translate(-2px, -1px);*/
+	background: yellow;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+	opacity: 1;
+	transform: rotate(0deg);
+	background: #ad1814;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+	opacity: 0;
+	transform: translate(0, -9px);
+	/*transform: rotate(-45deg) translate(0, -1px);*/
+	background: blue;
+}
+
+#menu
+{
+	font-family: "Raleway";
+	letter-spacing: 1px;
+
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	top: 0;
+	margin: -100px 0 0 -50px;
+	padding: 50px;
+	padding-top: 125px;
+
+	background: rgba(35,35,35,.56);
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	/* to stop flickering of text in safari */
+
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+	position: relative;
+	top: 65px;
+	padding: 17px 0;
+	font-size: 22px;
+}
+
+#menu li a {
+	font-size: 25px;
+	color: #f5f0ea;
+}
+
+#menu li a:hover {
+	color: #c4120d;
+
+	transition: color 0.3s ease;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+@media screen and (max-width: 860px) {
+	.welcome {
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.welcome {
+		padding: 0 80px 0 80px;
+	}
+
+	#menu {
+		width: 120px;
+	}
+}
+
+@media screen and (min-width: 860px) {
+	.welcome {
+		font-size: 85px;
+	}
+}
+
+@media screen and (max-width: 475px) {
+	.welcome {
+		padding: 0;
+		top: 17%;
+	}
+
+	#menuToggle	{
+		display: block;
+		position: absolute;
+		top: 40px;
+		left: auto;
+		right: 40px;
+	}
+
+	#menu {
+		margin: -100px 0 0 120px;
+		width: 100%;
+		transform: none;
+		background: rgba(35,35,35,.84);
+	}
+
+
+	#menuToggle input:checked ~ ul
+	{
+		transform: translate(-90%, 0);
+	}
+}
