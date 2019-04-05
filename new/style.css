@@ -236,8 +236,9 @@ a {
 
 @media screen and (max-width: 475px) {
 	.welcome {
-		position: absolute;
-		padding: 0;
+		/*position: absolute;*/
+		padding-top: 17vh;
+		padding: 150px 50px 50px 50px;
 		/*top: 17%;*/
 	}
 
@@ -256,6 +257,9 @@ a {
 		background: rgba(35,35,35,.84);
 	}
 
+	#menuToggle {
+		right: 8vw;
+	}
 
 	#menuToggle input:checked ~ ul
 	{
