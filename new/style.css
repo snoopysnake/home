@@ -32,29 +32,31 @@ body {
 	/*top: 15%;*/
 	position: relative;
 	display: table;
-	min-height: 100vh;
+	min-height: 100%;
 	background-color: rgba(205,205,205,.7);
 }
 
-.content > p > a {
+.content a:link {
 	font-weight: bold;
+	color: #161616;
 }
 
-.content > p > a:hover {
+.content a:visited {
+	color: #161616;
+}
+
+.content a:hover {
 	color: #ad1814;
 }
 
-.content > * {
-	margin-bottom: 30px;
+section {
+	margin-bottom: 64px;
 }
 
-.about > .content {
+.content {
 	font-family: "Raleway";
 	padding: 0 50px 50px 50px;
 	overflow-y: auto;
-}
-
-.content > p {
 	line-height: 30px;
 	font-size: 20px;
 }
@@ -218,6 +220,15 @@ a {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+::selection {
+	color: #f5f0ea;
+	background: rgba(35,35,35,.56);
+}
+::-moz-selection {
+	color: #f5f0ea;
+	background: rgba(35,35,35,.56);
 }
 
 @media screen and (max-width: 860px) {
