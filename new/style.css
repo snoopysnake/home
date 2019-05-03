@@ -27,7 +27,7 @@ body {
 	user-select: none;
 }
 
-.about {
+.main {
 	width: 56vw;
 	/*top: 15%;*/
 	position: relative;
@@ -61,7 +61,22 @@ section {
 	margin-bottom: 64px;
 }
 
-.sprites > img{
+section div {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+i {
+	color: #000000;
+}
+
+.quote {
+	color: #323232;
+}
+
+.sprites > img {
 	margin: 16px;
 	height: 64px;
 	width: 64px;
@@ -71,11 +86,8 @@ section {
 }
 
 .ice-cream {
-	padding-top: 25px;
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .ice-cream img {
@@ -88,6 +100,67 @@ section {
 #machine {
 	width: 60%;
 	height: 100%;
+}
+
+.aaff {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.aaff img {
+	margin: 5%;
+	width: 40%;
+	height: 40%;
+}
+
+.jtaf-ui {
+	display: flex;
+	justify-content: center;
+}
+
+.jtaf-ui img {
+	margin: 5%;
+	height: 45%;
+	width: 45%;
+}
+
+.camper-creator {
+	display: flex;
+	justify-content: center;
+}
+
+.sustain {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.trash {
+	position: absolute;
+	bottom: -5%;
+}
+
+.trash img {
+	width: 15%;
+}
+
+#wally {
+	position: absolute;
+	left: 0;
+	top: 5%;
+	width: 12%;
+    -webkit-animation: nod .3s linear infinite;
+    -moz-animation: nod .3s linear infinite;
+    animation: nod .3s linear infinite;
+}
+
+@-moz-keyframes nod { 50% { -moz-transform: rotate(20deg); } 100% { -moz-transform: rotate(0deg); } }
+@-webkit-keyframes nod { 50% { -webkit-transform: rotate(20deg); } 100% { -webkit-transform: rotate(0deg); } }
+@keyframes nod { 50% { -webkit-transform: rotate(20deg); transform:rotate(20deg); } 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } }
+
+#bins {
+	width: 60%;
 }
 
 .first-name {
@@ -298,7 +371,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-	.about {
+	.main {
 		width: auto;
 	}
 	.welcome {
@@ -330,5 +403,18 @@ a {
 	#menuToggle input:checked ~ ul
 	{
 		transform: translate(-90%, 0);
+	}
+
+	.camper-creator img {
+		height: 256px;
+		width: 256px;
+	}
+
+	#barcode {
+		width: 50%;
+	}
+
+	#wally {
+		width: 20%;
 	}
 }
