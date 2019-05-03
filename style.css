@@ -398,6 +398,10 @@ a {
 		right: 40px;
 	}
 
+	#menuToggle span {
+		background-color: #323232;
+	}
+
 	#menu {
 		margin: -100px 0 0 120px;
 		width: 100%;
