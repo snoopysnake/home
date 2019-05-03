@@ -381,6 +381,14 @@ a {
 		padding: 150px 50px 50px 50px;
 		/*top: 17%;*/
 	}
+	.first-name {
+		color: #161616;
+	}
+
+	.last-name {
+		color: #f5f0ea;
+		font-weight: normal;
+	}
 
 	#menuToggle	{
 		display: block;
