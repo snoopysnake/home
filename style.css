@@ -38,11 +38,12 @@ body {
 
 .content a:link {
 	font-weight: bold;
-	color: #161616;
+	color: #4b4d51;
+	/*color: #161616;*/
 }
 
 .content a:visited {
-	color: #161616;
+	color: #4b4d51;
 }
 
 .content a:hover {
