@@ -133,14 +133,20 @@ i {
 
 .jtaf-ui {
 	padding-top: 0;
-	display: flex;
-	justify-content: center;
+	/*text-align: center;*/
+	/*display: flex;*/
+	/*justify-content: center;*/
 }
 
 .jtaf-ui img {
-	margin: 5%;
-	height: 45%;
+	/*height: 40%;*/
+	vertical-align: middle;
+	margin-bottom: 4%;
 	width: 45%;
+}
+
+.jtaf-ui img:first-child {
+	margin-right: 2.5%;
 }
 
 .pdf {
