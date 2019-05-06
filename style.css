@@ -440,6 +440,10 @@ a {
 		transform: translate(-90%, 0);
 	}
 
+	.ice-cream img {
+		width: 0%;
+	}
+
 	.camper-creator img {
 		height: 256px;
 		width: 256px;
