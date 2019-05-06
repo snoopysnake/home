@@ -114,6 +114,11 @@ i {
 	height: 40%;
 }
 
+.camper-creator {
+	display: flex;
+	justify-content: center;
+}
+
 .jtaf-ui {
 	padding-top: 0;
 	display: flex;
@@ -126,9 +131,26 @@ i {
 	width: 45%;
 }
 
-.camper-creator {
-	display: flex;
-	justify-content: center;
+.pdf {
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+	/*flex-direction: column;*/
+}
+
+#ascii {
+    font-size: 5px;
+    letter-spacing: 3px;
+    line-height: 6px;
+    display: inline-block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+    text-align: center;
+}
+
+#barcode2 {
+	width: 95%;
 }
 
 .sustain {
@@ -423,8 +445,18 @@ a {
 		width: 256px;
 	}
 
-	#barcode {
+	#barcode1 {
 		width: 50%;
+	}
+
+	.pdf img:first-child {
+		width: 50%;
+	}
+
+	#ascii {
+	    font-size: 3px;
+	    letter-spacing: 2px;
+	    line-height: 4px;
 	}
 
 	#wally {
