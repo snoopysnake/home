@@ -24,7 +24,13 @@ body {
 	letter-spacing: 1px;
 	color: #161616;
 	padding-top: 8vh;
-	padding-bottom: 8vh;
+	user-select: none;
+}
+
+.job-title {
+	text-align: center;
+	font-family: "Raleway";
+	color: #2c2c2d;
 	user-select: none;
 }
 
@@ -60,7 +66,7 @@ body {
 }
 
 section {
-	margin-bottom: 64px;
+	margin-bottom: 40px;
 }
 
 section div {
@@ -78,6 +84,10 @@ i {
 	color: #323232;
 }
 
+.sprites {
+	margin: 25px;
+}
+
 .sprites > img {
 	margin: 16px;
 	height: 64px;
@@ -90,6 +100,40 @@ i {
 .sprites-spin {
 	animation: spin 1s linear 1;
 }
+
+.animation-sprites {
+	display: flex;
+	justify-content: center;
+}
+
+.animation-sprites img {
+	height: 64px;
+	width: 576px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+	background-color: rgba(255,255,255,.16);
+	-moz-box-shadow: 0 0 15px rgba(255,255,255,.18);
+	-webkit-box-shadow: 0 0 15px rgba(255,255,255,.18);
+	box-shadow: 0px 0px 15px rgba(255,255,255,.18);
+}
+
+.animation-sprites div {
+	height: 20px;
+	margin-left: 50px;
+	width: 64px;
+	background-image : url(./sprites/bass.png);
+	background-size: 576px 64px;
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+	animation: swim 1.25s steps(7) infinite;
+}
+
+@-moz-keyframes swim { 0%{ background-position-x:-128px; } 100%{ background-position-x:-576px; } }
+@-webkit-keyframes swim { 0%{ background-position-x:-128px; } 100%{ background-position-x:-576px; } }
+@keyframes swim { 0%{ background-position-x:-128px; } 100%{ background-position-x:-576px; } }
 
 /*.sprites > img:hover {
 	animation: spin 1s linear 1;
@@ -379,34 +423,75 @@ a {
 @media screen and (max-width: 860px) {
 	.welcome {
 		font-size: 60px;
+		padding-bottom: 15px;
+	}
+
+	.job-title {
+		font-size: 25px;
 	}
 }
 
 @media screen and (max-width: 700px) {
+	.main {
+		width: auto;
+	}
 	.welcome {
-		padding: 0 80px 0 80px;
+		padding-top: 17vh;
+		padding: 150px 50px 20px 50px;
+	}
+
+	.job-title {
+		color: #d0d0dd;
+		font-size: 25px;
+	}
+
+	.first-name {
+		color: #f5f0ea;
+	}
+
+	.last-name {		
+		color: #161616;
+		font-weight: normal;
 	}
 
 	#menu {
 		width: 120px;
+	}
+
+	.animation-sprites {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.animation-sprites img {
+		height: 10vw;
+		width: 90vw;
+		image-rendering: pixelated;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: crisp-edges;
+		margin-bottom: 25px;
 	}
 }
 
 @media screen and (min-width: 860px) {
 	.welcome {
 		font-size: 85px;
+		padding-bottom: 20px;
+	}
+
+	.job-title {
+		font-size: 30px;
 	}
 }
 
 @media screen and (max-width: 480px) {
-
 	.main {
 		width: auto;
 	}
 	.welcome {
 		/*position: absolute;*/
 		padding-top: 17vh;
-		padding: 150px 50px 50px 50px;
+		padding: 150px 50px 20px 50px;
 		/*top: 17%;*/
 	}
 	.first-name {
